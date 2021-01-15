@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<tlstester.version>3.2.1-SNAPSHOT</tlstester.version>
+		<api.directory>apis</api.directory>
+		<java.compile.version>8</java.compile.version>
+		<maven.deploy.skip>true</maven.deploy.skip>
+	</properties>
+
+	<groupId>io.tomahawkd</groupId>
+	<artifactId>tls-tester-api-parent</artifactId>
+	<version>${tlstester.version}</version>
+
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>tls-tester-arg-api</module>
+		<module>tls-tester-identifier-api</module>
+		<module>tls-tester-data-api</module>
+		<module>tls-tester-analyzer-api</module>
+		<module>tls-tester-database-api</module>
+		<module>tls-tester-extension-api</module>
+		<module>tls-tester-socket-api</module>
+		<module>tls-tester-api</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.compile.version}</source>
+					<target>${java.compile.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>18.0.0</version>
+		</dependency>
+	</dependencies>
+
+</project>

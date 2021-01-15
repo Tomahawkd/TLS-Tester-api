@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>io.tomahawkd</groupId>
+		<artifactId>tls-tester-api-parent</artifactId>
+		<version>${tlstester.version}</version>
+	</parent>
+
+	<artifactId>tls-tester-api</artifactId>
+	<version>${tlstester.version}</version>
+
+	<properties>
+		<maven.deploy.skip>false</maven.deploy.skip>
+	</properties>
+
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.compile.version}</source>
+					<target>${java.compile.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<outputDirectory>${project.parent.basedir}/${api.directory}</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-identifier-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-data-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-database-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-arg-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-analyzer-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tls-tester-socket-api</artifactId>
+			<version>${tlstester.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.tomahawkd</groupId>
+			<artifactId>tls-tester-extension-api</artifactId>
+			<version>3.2.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+</project>
