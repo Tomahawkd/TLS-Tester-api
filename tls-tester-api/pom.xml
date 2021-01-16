@@ -68,11 +68,6 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>tls-tester-arg-api</artifactId>
-			<version>${tlstester.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
 			<artifactId>tls-tester-analyzer-api</artifactId>
 			<version>${tlstester.version}</version>
 		</dependency>

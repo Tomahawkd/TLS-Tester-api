@@ -26,7 +26,6 @@
 	</distributionManagement>
 
 	<modules>
-		<module>tls-tester-arg-api</module>
 		<module>tls-tester-identifier-api</module>
 		<module>tls-tester-data-api</module>
 		<module>tls-tester-analyzer-api</module>
