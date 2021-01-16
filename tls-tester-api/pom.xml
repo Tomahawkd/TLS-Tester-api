@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>io.tomahawkd</groupId>
 			<artifactId>tls-tester-extension-api</artifactId>
-			<version>3.2.1-SNAPSHOT</version>
+			<version>${tlstester.version}</version>
 		</dependency>
 	</dependencies>
 
