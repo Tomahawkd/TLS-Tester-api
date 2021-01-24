@@ -5,4 +5,7 @@
 
 ## Introduction
 
-This repo contains the api for TLS-Tester
+This repo contains the api for [TLS-Tester](https://github.com/Tomahawkd/TLS-Tester)
+
+## Build
+`mvn package` and find apis in `./api`
