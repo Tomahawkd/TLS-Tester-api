@@ -9,7 +9,7 @@ import io.tomahawkd.tlstester.provider.TargetStorage;
 public interface TargetSource extends ParameterizedExtensionPoint {
 
 	/**
-	 * data acquire procedure, use {@link TargetStorage#add(java.net.InetSocketAddress)}
+	 * data acquire procedure, use {@link TargetStorage#add(io.tomahawkd.tlstester.data.TargetInfo)}
 	 * or {@link TargetStorage#addAll(java.util.Collection)} to add target
 	 *
 	 * @param storage to store data
